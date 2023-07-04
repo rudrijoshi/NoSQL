@@ -53,6 +53,7 @@ module.exports = {
             if (!users) {
                 return res.status(404).json({ message: 'No user with this id' });
             }
+            res.status(200).json(users);
         }
         catch (err) {
             res.status(500).json(err);
@@ -76,11 +77,10 @@ module.exports = {
     //Create a friend
     async createFriend(req, res) {
         console.log('You have created a friend');
-        console.log(req.body);
         try {
             const user = await User.findOneAndUpdate(
                 { _id: req.params.userId },
-                { $addtoSet: { friends: req.body } },
+                { $push: { friends: req.params.friendId } },
                 { runValidators: true, new: true })
             if (!user) {
                 return res.status(404).json({ message: 'No user found for that userId' });
@@ -88,7 +88,7 @@ module.exports = {
             res.json(user);
         }
         catch (err) {
-            res.status(500).json(err);
+            res.status(500).json(err.message);
         }
     },
     //Delete a friend
@@ -96,15 +96,15 @@ module.exports = {
         try {
             const user = await User.findOneAndUpdate(
                 { _id: req.params.userId },
-                { $pull: { friend: { friendId: req.params.friendId } } },
-                { runValidators, new: true });
+                { $pull: { friends: req.params.friendId } },
+                { new: true });
             if (!user) {
                 return res.status(404).json({ message: 'No user foubd with that userId' });
             }
             res.json(user);
         }
         catch (err) {
-            res.status(500).json(err);
+            res.status(500).json(err.message);
         }
     }
 
