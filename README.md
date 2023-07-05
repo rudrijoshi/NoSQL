@@ -33,7 +33,7 @@ What are the steps required to install your project?
 
 - URL link for the deployed GitHub application:
 - URL link for the GitHub repository:
-- URL link for the screencastify:
+- URL link for the screencastify: https://watch.screencastify.com/v/dgGYL9hPqWbYmxxoGKC9
 
 ```md
 GIVEN a social network API
