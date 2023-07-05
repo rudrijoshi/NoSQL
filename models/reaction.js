@@ -1,18 +1,18 @@
-const { Schema, Types} = require('mongoose');
+const { Schema, Types } = require('mongoose');
 const { format_date } = require('../utils/helper');
-// Schema to create Student model
+
 const reactionSchema = new Schema(
     {
         reactionId: {
             type: Schema.Types.ObjectId,
-            default: () => new Types.ObjectId(),        
+            default: () => new Types.ObjectId(),
         },
-        reactionBody: {      
+        reactionBody: {
             type: String,
             required: true,
             maxlength: 280,
         },
-            createdAt: {
+        createdAt: {
             type: Date,
             default: Date.now,
             get: ts => format_date(ts),
@@ -25,10 +25,9 @@ const reactionSchema = new Schema(
     {
         toJSON: {
             getters: true,
-            virtuals: true,
+
         },
         id: false,
-        _id: false,
     }
 );
 

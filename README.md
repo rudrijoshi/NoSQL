@@ -1,6 +1,6 @@
 # 18 NoSQL: Social Network API
 
-## Your Task
+## Description
 
 MongoDB is a popular choice for many social networks due to its speed with large amounts of data and flexibility with unstructured data. Over the last part of this course, you’ll use several of the technologies that social networking platforms use in their full-stack applications. Because the foundation of these applications is data, it’s important that you understand how to build and structure the API first.
 
@@ -10,15 +10,30 @@ No seed data is provided, so you’ll need to create your own data using Insomni
 
 Because this application won’t be deployed, you’ll also need to create a walkthrough video that demonstrates its functionality and all of the following acceptance criteria being met. You’ll need to submit a link to the video and add it to the README of your project.
 
-## User Story
+## Technologies Used
 
-```md
-AS A social media startup
-I WANT an API for my social network that uses a NoSQL database
-SO THAT my website can handle large amounts of unstructured data
-```
+- Javascript
+- Node.js
+- Express
+- Mongoose
+- MongoDB
+- NPM
 
-## Acceptance Criteria
+
+## Installation
+
+What are the steps required to install your project?
+
+- Provided step by step description on how to get the developement of environment running.
+- Installed npm using npm init to initiate the npm.
+- After that run the command npm i and then npm start.
+- User can create own data using Insomnia after creating the API.
+
+## Links
+
+- URL link for the deployed GitHub application:
+- URL link for the GitHub repository:
+- URL link for the screencastify:
 
 ```md
 GIVEN a social network API

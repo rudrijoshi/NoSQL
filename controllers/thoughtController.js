@@ -81,7 +81,7 @@ module.exports = {
         try {
             const thought = await Thought.findOneAndUpdate(
                 { _id: req.params.thoughtId },
-                { $push: { reactions: req.params.reactionId } },
+                { $push: { reactions: req.body } },
                 { runValidators: true, new: true }
             )
             if (!thought) {
@@ -100,7 +100,7 @@ module.exports = {
         try {
             const thought = await Thought.findOneAndUpdate(
                 { _id: req.params.thoughtId },
-                { $pull: { reaction: { reactionId: req.params.reactionId } } },
+                { $pull: { reactions: { reactionId: req.params.reactionId } } },
                 { runValidators: true, new: true })
             if (!thought) {
                 return res.status(404).json({ message: 'No thought found for that reactionId' });
