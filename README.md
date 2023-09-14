@@ -25,7 +25,7 @@ What are the steps required to install your project?
 
 ## Links
 
-- URL link for the deployed GitHub application: https://rudrijoshi.github.io/Social-Network-Api-project/
-- URL link for the GitHub repository: https://github.com/rudrijoshi/Social-Network-Api-project/
+- URL link for the deployed GitHub application: https://rudrijoshi.github.io/Social-network/
+- URL link for the GitHub repository: https://github.com/rudrijoshi/Social-network/
 - URL link for the screencastify: https://watch.screencastify.com/v/dgGYL9hPqWbYmxxoGKC9
 
